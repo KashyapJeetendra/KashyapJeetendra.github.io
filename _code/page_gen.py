@@ -68,7 +68,7 @@ for page in os.listdir("_code/pages"):
     new_page_loc = page.replace(' ','-').lower()
     page_m_time, t = convert_date(os.path.getmtime(page_loc))
     pages.append({
-        "loc": new_page_loc,
+        "loc": new_page_loc.split('.')[0],
         "m_time": page_m_time,
         "heading": heading,
         "xml_time": t
